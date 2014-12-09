@@ -2,12 +2,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
     <metadata>
         <id>System.Net.FtpClient.Async</id>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
         <title>System.Net.FtpClient.Async Extensions</title>
         <authors>ClouDeveloper</authors>
         <owners>ClouDeveloper</owners>
         <licenseUrl>https://raw.githubusercontent.com/rkttu/System.Net.FtpClient.Async/master/LICENSE</licenseUrl>
-        <projectUrl>https://github.com/rkttu/mime</projectUrl>
+        <projectUrl>https://github.com/rkttu/System.Net.FtpClient.Async</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>This package provides async extensions for System.Net.FtpClient library.</description>
         <summary>This package provides async extensions for System.Net.FtpClient library.</summary>
