@@ -26,7 +26,7 @@ namespace System.Net.FtpClient.Async.Extensions
             return (factory = factory ?? Task<string>.Factory).FromAsync(
                 client.BeginGetXSHA512(path, null, null),
                 XSHA512.EndGetXSHA512,
-                creationOptions, scheduler ?? factory.Scheduler);
+                creationOptions, scheduler ?? factory.Scheduler ?? TaskScheduler.Current);
         }
     }
 }

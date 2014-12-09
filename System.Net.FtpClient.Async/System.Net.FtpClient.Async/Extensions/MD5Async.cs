@@ -26,7 +26,7 @@ namespace System.Net.FtpClient.Async.Extensions
             return (factory = factory ?? Task<string>.Factory).FromAsync(
                 client.BeginGetMD5(path, null, null),
                 MD5.EndGetMD5,
-                creationOptions, scheduler ?? factory.Scheduler);
+                creationOptions, scheduler ?? factory.Scheduler ?? TaskScheduler.Current);
         }
     }
 }

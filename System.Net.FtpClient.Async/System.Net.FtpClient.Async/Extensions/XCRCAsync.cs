@@ -26,7 +26,7 @@ namespace System.Net.FtpClient.Async.Extensions
             return (factory = factory ?? Task<string>.Factory).FromAsync(
                 client.BeginGetXCRC(path, null, null),
                 XCRC.EndGetXCRC,
-                creationOptions, scheduler ?? factory.Scheduler);
+                creationOptions, scheduler ?? factory.Scheduler ?? TaskScheduler.Current);
         }
     }
 }

@@ -27,7 +27,7 @@ namespace System.Net.FtpClient.Extensions.Async
             return (factory = factory ?? Task<FtpHash>.Factory).FromAsync(
                 client.BeginGetChecksum(path, null, null),
                 ChecksumExtension.EndGetChecksum,
-                creationOptions, scheduler ?? factory.Scheduler);
+                creationOptions, scheduler ?? factory.Scheduler ?? TaskScheduler.Current);
         }
     }
 }

@@ -27,7 +27,7 @@ namespace System.Net.FtpClient.Async
             return (factory = factory ?? Task.Factory).FromAsync(
                 client.BeginConnect(null, null),
                 client.EndConnect,
-                creationOptions, scheduler ?? factory.Scheduler);
+                creationOptions, scheduler ?? factory.Scheduler ?? TaskScheduler.Current);
         }
 
         /// <summary>
@@ -47,7 +47,7 @@ namespace System.Net.FtpClient.Async
             return (factory = factory ?? Task.Factory).FromAsync(
                 client.BeginCreateDirectory(path, null, null),
                 client.EndCreateDirectory,
-                creationOptions, scheduler ?? factory.Scheduler);
+                creationOptions, scheduler ?? factory.Scheduler ?? TaskScheduler.Current);
         }
 
         /// <summary>
@@ -68,7 +68,7 @@ namespace System.Net.FtpClient.Async
             return (factory = factory ?? Task.Factory).FromAsync(
                 client.BeginCreateDirectory(path, force, null, null),
                 client.EndCreateDirectory,
-                creationOptions, scheduler ?? factory.Scheduler);
+                creationOptions, scheduler ?? factory.Scheduler ?? TaskScheduler.Current);
         }
 
         /// <summary>
@@ -88,7 +88,7 @@ namespace System.Net.FtpClient.Async
             return (factory = factory ?? Task.Factory).FromAsync(
                 client.BeginDeleteDirectory(path, null, null),
                 client.EndDeleteDirectory,
-                creationOptions, scheduler ?? factory.Scheduler);
+                creationOptions, scheduler ?? factory.Scheduler ?? TaskScheduler.Current);
         }
 
         /// <summary>
@@ -109,7 +109,7 @@ namespace System.Net.FtpClient.Async
             return (factory = factory ?? Task.Factory).FromAsync(
                 client.BeginDeleteDirectory(path, force, null, null),
                 client.EndDeleteDirectory,
-                creationOptions, scheduler ?? factory.Scheduler);
+                creationOptions, scheduler ?? factory.Scheduler ?? TaskScheduler.Current);
         }
 
         /// <summary>
@@ -131,7 +131,7 @@ namespace System.Net.FtpClient.Async
             return (factory = factory ?? Task.Factory).FromAsync(
                 client.BeginDeleteDirectory(path, force, options, null, null),
                 client.EndDeleteDirectory,
-                creationOptions, scheduler ?? factory.Scheduler);
+                creationOptions, scheduler ?? factory.Scheduler ?? TaskScheduler.Current);
         }
 
         /// <summary>
@@ -151,7 +151,7 @@ namespace System.Net.FtpClient.Async
             return (factory = factory ?? Task.Factory).FromAsync(
                 client.BeginDeleteFile(path, null, null),
                 client.EndDeleteFile,
-                creationOptions, scheduler ?? factory.Scheduler);
+                creationOptions, scheduler ?? factory.Scheduler ?? TaskScheduler.Current);
         }
 
         /// <summary>
@@ -171,7 +171,7 @@ namespace System.Net.FtpClient.Async
             return (factory = factory ?? Task<FtpListItem>.Factory).FromAsync(
                 client.BeginDereferenceLink(item, null, null),
                 client.EndDereferenceLink,
-                creationOptions, scheduler ?? factory.Scheduler);
+                creationOptions, scheduler ?? factory.Scheduler ?? TaskScheduler.Current);
         }
 
         /// <summary>
@@ -192,7 +192,7 @@ namespace System.Net.FtpClient.Async
             return (factory = factory ?? Task<FtpListItem>.Factory).FromAsync(
                 client.BeginDereferenceLink(item, recMax, null, null),
                 client.EndDereferenceLink,
-                creationOptions, scheduler ?? factory.Scheduler);
+                creationOptions, scheduler ?? factory.Scheduler ?? TaskScheduler.Current);
         }
 
         /// <summary>
@@ -212,7 +212,7 @@ namespace System.Net.FtpClient.Async
             return (factory = factory ?? Task<bool>.Factory).FromAsync(
                 client.BeginDirectoryExists(path, null, null),
                 client.EndDirectoryExists,
-                creationOptions, scheduler ?? factory.Scheduler);
+                creationOptions, scheduler ?? factory.Scheduler ?? TaskScheduler.Current);
         }
 
         /// <summary>
@@ -231,7 +231,7 @@ namespace System.Net.FtpClient.Async
             return (factory = factory ?? Task.Factory).FromAsync(
                 client.BeginDisconnect(null, null),
                 client.EndDisconnect,
-                creationOptions, scheduler ?? factory.Scheduler);
+                creationOptions, scheduler ?? factory.Scheduler ?? TaskScheduler.Current);
         }
 
         /// <summary>
@@ -251,7 +251,7 @@ namespace System.Net.FtpClient.Async
             return (factory = factory ?? Task<FtpReply>.Factory).FromAsync(
                 client.BeginExecute(command, null, null),
                 client.EndExecute,
-                creationOptions, scheduler ?? factory.Scheduler);
+                creationOptions, scheduler ?? factory.Scheduler ?? TaskScheduler.Current);
         }
 
         /// <summary>
@@ -271,7 +271,7 @@ namespace System.Net.FtpClient.Async
             return (factory = factory ?? Task<bool>.Factory).FromAsync(
                 client.BeginFileExists(path, null, null),
                 client.EndFileExists,
-                creationOptions, scheduler ?? factory.Scheduler);
+                creationOptions, scheduler ?? factory.Scheduler ?? TaskScheduler.Current);
         }
 
         /// <summary>
@@ -292,7 +292,7 @@ namespace System.Net.FtpClient.Async
             return (factory = factory ?? Task<bool>.Factory).FromAsync(
                 client.BeginFileExists(path, options, null, null),
                 client.EndFileExists,
-                creationOptions, scheduler ?? factory.Scheduler);
+                creationOptions, scheduler ?? factory.Scheduler ?? TaskScheduler.Current);
         }
 
         /// <summary>
@@ -312,7 +312,7 @@ namespace System.Net.FtpClient.Async
             return (factory = factory ?? Task<long>.Factory).FromAsync(
                 client.BeginGetFileSize(path, null, null),
                 client.EndGetFileSize,
-                creationOptions, scheduler ?? factory.Scheduler);
+                creationOptions, scheduler ?? factory.Scheduler ?? TaskScheduler.Current);
         }
 
         /// <summary>
@@ -332,7 +332,7 @@ namespace System.Net.FtpClient.Async
             return (factory = factory ?? Task.Factory).FromAsync(
                 client.BeginGetHash(path, null, null),
                 client.EndGetHash,
-                creationOptions, scheduler ?? factory.Scheduler);
+                creationOptions, scheduler ?? factory.Scheduler ?? TaskScheduler.Current);
         }
 
         /// <summary>
@@ -351,7 +351,7 @@ namespace System.Net.FtpClient.Async
             return (factory = factory ?? Task<FtpHashAlgorithm>.Factory).FromAsync(
                 client.BeginGetHashAlgorithm(null, null),
                 client.EndGetHashAlgorithm,
-                creationOptions, scheduler ?? factory.Scheduler);
+                creationOptions, scheduler ?? factory.Scheduler ?? TaskScheduler.Current);
         }
 
         /// <summary>
@@ -370,7 +370,7 @@ namespace System.Net.FtpClient.Async
             return (factory = factory ?? Task<FtpListItem[]>.Factory).FromAsync(
                 client.BeginGetListing(null, null),
                 client.EndGetListing,
-                creationOptions, scheduler ?? factory.Scheduler);
+                creationOptions, scheduler ?? factory.Scheduler ?? TaskScheduler.Current);
         }
 
         /// <summary>
@@ -390,7 +390,7 @@ namespace System.Net.FtpClient.Async
             return (factory = factory ?? Task<FtpListItem[]>.Factory).FromAsync(
                 client.BeginGetListing(path, null, null),
                 client.EndGetListing,
-                creationOptions, scheduler ?? factory.Scheduler);
+                creationOptions, scheduler ?? factory.Scheduler ?? TaskScheduler.Current);
         }
 
         /// <summary>
@@ -411,7 +411,7 @@ namespace System.Net.FtpClient.Async
             return (factory = factory ?? Task<FtpListItem[]>.Factory).FromAsync(
                 client.BeginGetListing(path, options, null, null),
                 client.EndGetListing,
-                creationOptions, scheduler ?? factory.Scheduler);
+                creationOptions, scheduler ?? factory.Scheduler ?? TaskScheduler.Current);
         }
 
         /// <summary>
@@ -431,7 +431,7 @@ namespace System.Net.FtpClient.Async
             return (factory = factory ?? Task<DateTime>.Factory).FromAsync(
                 client.BeginGetModifiedTime(path, null, null),
                 client.EndGetModifiedTime,
-                creationOptions, scheduler ?? factory.Scheduler);
+                creationOptions, scheduler ?? factory.Scheduler ?? TaskScheduler.Current);
         }
 
         /// <summary>
@@ -450,7 +450,7 @@ namespace System.Net.FtpClient.Async
             return (factory = factory ?? Task<string[]>.Factory).FromAsync(
                 client.BeginGetNameListing(null, null),
                 client.EndGetNameListing,
-                creationOptions, scheduler ?? factory.Scheduler);
+                creationOptions, scheduler ?? factory.Scheduler ?? TaskScheduler.Current);
         }
 
         /// <summary>
@@ -470,7 +470,7 @@ namespace System.Net.FtpClient.Async
             return (factory = factory ?? Task<string[]>.Factory).FromAsync(
                 client.BeginGetNameListing(path, null, null),
                 client.EndGetNameListing,
-                creationOptions, scheduler ?? factory.Scheduler);
+                creationOptions, scheduler ?? factory.Scheduler ?? TaskScheduler.Current);
         }
 
         /// <summary>
@@ -490,7 +490,7 @@ namespace System.Net.FtpClient.Async
             return (factory = factory ?? Task<FtpListItem>.Factory).FromAsync(
                 client.BeginGetObjectInfo(path, null, null),
                 client.EndGetObjectInfo,
-                creationOptions, scheduler ?? factory.Scheduler);
+                creationOptions, scheduler ?? factory.Scheduler ?? TaskScheduler.Current);
         }
 
         /// <summary>
@@ -509,7 +509,7 @@ namespace System.Net.FtpClient.Async
             return (factory = factory ?? Task<string>.Factory).FromAsync(
                 client.BeginGetWorkingDirectory(null, null),
                 client.EndGetWorkingDirectory,
-                creationOptions, scheduler ?? factory.Scheduler);
+                creationOptions, scheduler ?? factory.Scheduler ?? TaskScheduler.Current);
         }
 
         /// <summary>
@@ -529,7 +529,7 @@ namespace System.Net.FtpClient.Async
             return (factory = factory ?? Task<Stream>.Factory).FromAsync(
                 client.BeginOpenAppend(path, null, null),
                 client.EndOpenAppend,
-                creationOptions, scheduler ?? factory.Scheduler);
+                creationOptions, scheduler ?? factory.Scheduler ?? TaskScheduler.Current);
         }
 
         /// <summary>
@@ -550,7 +550,7 @@ namespace System.Net.FtpClient.Async
             return (factory = factory ?? Task<Stream>.Factory).FromAsync(
                 client.BeginOpenAppend(path, type, null, null),
                 client.EndOpenAppend,
-                creationOptions, scheduler ?? factory.Scheduler);
+                creationOptions, scheduler ?? factory.Scheduler ?? TaskScheduler.Current);
         }
 
         /// <summary>
@@ -570,7 +570,7 @@ namespace System.Net.FtpClient.Async
             return (factory = factory ?? Task<Stream>.Factory).FromAsync(
                 client.BeginOpenRead(path, null, null),
                 client.EndOpenRead,
-                creationOptions, scheduler ?? factory.Scheduler);
+                creationOptions, scheduler ?? factory.Scheduler ?? TaskScheduler.Current);
         }
 
         /// <summary>
@@ -591,7 +591,7 @@ namespace System.Net.FtpClient.Async
             return (factory = factory ?? Task<Stream>.Factory).FromAsync(
                 client.BeginOpenRead(path, restart, null, null),
                 client.EndOpenRead,
-                creationOptions, scheduler ?? factory.Scheduler);
+                creationOptions, scheduler ?? factory.Scheduler ?? TaskScheduler.Current);
         }
 
         /// <summary>
@@ -612,7 +612,7 @@ namespace System.Net.FtpClient.Async
             return (factory = factory ?? Task<Stream>.Factory).FromAsync(
                 client.BeginOpenRead(path, type, null, null),
                 client.EndOpenRead,
-                creationOptions, scheduler ?? factory.Scheduler);
+                creationOptions, scheduler ?? factory.Scheduler ?? TaskScheduler.Current);
         }
 
         /// <summary>
@@ -634,7 +634,7 @@ namespace System.Net.FtpClient.Async
             return (factory = factory ?? Task<Stream>.Factory).FromAsync(
                 client.BeginOpenRead(path, type, restart, null, null),
                 client.EndOpenRead,
-                creationOptions, scheduler ?? factory.Scheduler);
+                creationOptions, scheduler ?? factory.Scheduler ?? TaskScheduler.Current);
         }
 
         /// <summary>
@@ -654,7 +654,7 @@ namespace System.Net.FtpClient.Async
             return (factory = factory ?? Task<Stream>.Factory).FromAsync(
                 client.BeginOpenWrite(path, null, null),
                 client.EndOpenWrite,
-                creationOptions, scheduler ?? factory.Scheduler);
+                creationOptions, scheduler ?? factory.Scheduler ?? TaskScheduler.Current);
         }
 
         /// <summary>
@@ -675,7 +675,7 @@ namespace System.Net.FtpClient.Async
             return (factory = factory ?? Task<Stream>.Factory).FromAsync(
                 client.BeginOpenWrite(path, type, null, null),
                 client.EndOpenWrite,
-                creationOptions, scheduler ?? factory.Scheduler);
+                creationOptions, scheduler ?? factory.Scheduler ?? TaskScheduler.Current);
         }
 
         /// <summary>
@@ -696,7 +696,7 @@ namespace System.Net.FtpClient.Async
             return (factory = factory ?? Task.Factory).FromAsync(
                 client.BeginRename(path, dest, null, null),
                 client.EndRename,
-                creationOptions, scheduler ?? factory.Scheduler);
+                creationOptions, scheduler ?? factory.Scheduler ?? TaskScheduler.Current);
         }
 
         /// <summary>
@@ -716,7 +716,7 @@ namespace System.Net.FtpClient.Async
             return (factory = factory ?? Task.Factory).FromAsync(
                 client.BeginSetHashAlgorithm(type, null, null),
                 client.EndSetHashAlgorithm,
-                creationOptions, scheduler ?? factory.Scheduler);
+                creationOptions, scheduler ?? factory.Scheduler ?? TaskScheduler.Current);
         }
 
         /// <summary>
@@ -736,7 +736,7 @@ namespace System.Net.FtpClient.Async
             return (factory = factory ?? Task.Factory).FromAsync(
                 client.BeginSetWorkingDirectory(path, null, null),
                 client.EndSetWorkingDirectory,
-                creationOptions, scheduler ?? factory.Scheduler);
+                creationOptions, scheduler ?? factory.Scheduler ?? TaskScheduler.Current);
         }
     }
 }
