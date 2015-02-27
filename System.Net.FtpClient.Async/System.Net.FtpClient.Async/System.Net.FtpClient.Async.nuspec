@@ -1,27 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
     <metadata>
-        <id>System.Net.FtpClient.Async</id>
-        <version>1.0.2</version>
-        <title>System.Net.FtpClient.Async Extensions</title>
-        <authors>ClouDeveloper</authors>
-        <owners>ClouDeveloper</owners>
+        <id>$id$</id>
+        <version>$version$</version>
+        <title>$title$</title>
+        <authors>$author$</authors>
+        <owners>$author$</owners>
         <licenseUrl>https://raw.githubusercontent.com/rkttu/System.Net.FtpClient.Async/master/LICENSE</licenseUrl>
         <projectUrl>https://github.com/rkttu/System.Net.FtpClient.Async</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>This package provides async extensions for System.Net.FtpClient library.</description>
-        <summary>This package provides async extensions for System.Net.FtpClient library.</summary>
-        <copyright>(c) ClouDeveloper, All rights reserved.</copyright>
+        <description>$description$</description>
+        <summary>$description$</summary>
+        <copyright>$copyright$</copyright>
         <tags>system net ftpclient async ftp client cloudeveloper</tags>
-        <dependencies>
-          <group targetFramework=".NETFramework4.0">
-            <dependency id="System.Net.FtpClient" version="1.0.5281.14359" />
-          </group>
-        </dependencies>
     </metadata>
-    <files>
-        <file src="bin\Release\System.Net.FtpClient.Async.dll" target="lib\net40\System.Net.FtpClient.Async.dll" />
-        <file src="bin\Release\System.Net.FtpClient.Async.pdb" target="lib\net40\System.Net.FtpClient.Async.pdb" />
-        <file src="bin\Release\System.Net.FtpClient.Async.xml" target="lib\net40\System.Net.FtpClient.Async.xml" />
-    </files>
 </package>
