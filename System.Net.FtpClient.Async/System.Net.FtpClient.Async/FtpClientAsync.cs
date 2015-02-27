@@ -19,7 +19,7 @@ namespace System.Net.FtpClient.Async
         /// <param name="creationOptions">The creation options.</param>
         /// <param name="scheduler">The scheduler.</param>
         /// <returns></returns>
-        public static Task ConnectAsync(this FtpClient client,
+        public static Task ConnectAsync(this IFtpClient client,
             TaskFactory factory = null,
             TaskCreationOptions creationOptions = default(TaskCreationOptions),
             TaskScheduler scheduler = null)
@@ -39,7 +39,7 @@ namespace System.Net.FtpClient.Async
         /// <param name="creationOptions">The creation options.</param>
         /// <param name="scheduler">The scheduler.</param>
         /// <returns></returns>
-        public static Task CreateDirectoryAsync(this FtpClient client, string path,
+        public static Task CreateDirectoryAsync(this IFtpClient client, string path,
             TaskFactory factory = null,
             TaskCreationOptions creationOptions = default(TaskCreationOptions),
             TaskScheduler scheduler = null)
@@ -60,7 +60,7 @@ namespace System.Net.FtpClient.Async
         /// <param name="creationOptions">The creation options.</param>
         /// <param name="scheduler">The scheduler.</param>
         /// <returns></returns>
-        public static Task CreateDirectoryAsync(this FtpClient client, string path, bool force,
+        public static Task CreateDirectoryAsync(this IFtpClient client, string path, bool force,
             TaskFactory factory = null,
             TaskCreationOptions creationOptions = default(TaskCreationOptions),
             TaskScheduler scheduler = null)
@@ -80,7 +80,7 @@ namespace System.Net.FtpClient.Async
         /// <param name="creationOptions">The creation options.</param>
         /// <param name="scheduler">The scheduler.</param>
         /// <returns></returns>
-        public static Task DeleteDirectoryAsync(this FtpClient client, string path,
+        public static Task DeleteDirectoryAsync(this IFtpClient client, string path,
             TaskFactory factory = null,
             TaskCreationOptions creationOptions = default(TaskCreationOptions),
             TaskScheduler scheduler = null)
@@ -101,7 +101,7 @@ namespace System.Net.FtpClient.Async
         /// <param name="creationOptions">The creation options.</param>
         /// <param name="scheduler">The scheduler.</param>
         /// <returns></returns>
-        public static Task DeleteDirectoryAsync(this FtpClient client, string path, bool force,
+        public static Task DeleteDirectoryAsync(this IFtpClient client, string path, bool force,
             TaskFactory factory = null,
             TaskCreationOptions creationOptions = default(TaskCreationOptions),
             TaskScheduler scheduler = null)
@@ -123,7 +123,7 @@ namespace System.Net.FtpClient.Async
         /// <param name="creationOptions">The creation options.</param>
         /// <param name="scheduler">The scheduler.</param>
         /// <returns></returns>
-        public static Task DeleteDirectoryAsync(this FtpClient client, string path, bool force, FtpListOption options,
+        public static Task DeleteDirectoryAsync(this IFtpClient client, string path, bool force, FtpListOption options,
             TaskFactory factory = null,
             TaskCreationOptions creationOptions = default(TaskCreationOptions),
             TaskScheduler scheduler = null)
@@ -143,7 +143,7 @@ namespace System.Net.FtpClient.Async
         /// <param name="creationOptions">The creation options.</param>
         /// <param name="scheduler">The scheduler.</param>
         /// <returns></returns>
-        public static Task DeleteFileAsync(this FtpClient client, string path,
+        public static Task DeleteFileAsync(this IFtpClient client, string path,
             TaskFactory factory = null,
             TaskCreationOptions creationOptions = default(TaskCreationOptions),
             TaskScheduler scheduler = null)
@@ -163,7 +163,7 @@ namespace System.Net.FtpClient.Async
         /// <param name="creationOptions">The creation options.</param>
         /// <param name="scheduler">The scheduler.</param>
         /// <returns></returns>
-        public static Task<FtpListItem> DereferenceLinkAsync(this FtpClient client, FtpListItem item,
+        public static Task<FtpListItem> DereferenceLinkAsync(this IFtpClient client, FtpListItem item,
             TaskFactory<FtpListItem> factory = null,
             TaskCreationOptions creationOptions = default(TaskCreationOptions),
             TaskScheduler scheduler = null)
@@ -184,7 +184,7 @@ namespace System.Net.FtpClient.Async
         /// <param name="creationOptions">The creation options.</param>
         /// <param name="scheduler">The scheduler.</param>
         /// <returns></returns>
-        public static Task<FtpListItem> DereferenceLinkAsync(this FtpClient client, FtpListItem item, int recMax,
+        public static Task<FtpListItem> DereferenceLinkAsync(this IFtpClient client, FtpListItem item, int recMax,
             TaskFactory<FtpListItem> factory = null,
             TaskCreationOptions creationOptions = default(TaskCreationOptions),
             TaskScheduler scheduler = null)
@@ -204,7 +204,7 @@ namespace System.Net.FtpClient.Async
         /// <param name="creationOptions">The creation options.</param>
         /// <param name="scheduler">The scheduler.</param>
         /// <returns></returns>
-        public static Task<bool> DirectoryExistsAsync(this FtpClient client, string path,
+        public static Task<bool> DirectoryExistsAsync(this IFtpClient client, string path,
             TaskFactory<bool> factory = null,
             TaskCreationOptions creationOptions = default(TaskCreationOptions),
             TaskScheduler scheduler = null)
@@ -223,7 +223,7 @@ namespace System.Net.FtpClient.Async
         /// <param name="creationOptions">The creation options.</param>
         /// <param name="scheduler">The scheduler.</param>
         /// <returns></returns>
-        public static Task DisconnectAsync(this FtpClient client,
+        public static Task DisconnectAsync(this IFtpClient client,
             TaskFactory factory = null,
             TaskCreationOptions creationOptions = default(TaskCreationOptions),
             TaskScheduler scheduler = null)
@@ -243,7 +243,7 @@ namespace System.Net.FtpClient.Async
         /// <param name="creationOptions">The creation options.</param>
         /// <param name="scheduler">The scheduler.</param>
         /// <returns></returns>
-        public static Task<FtpReply> ExecuteAsync(this FtpClient client, string command,
+        public static Task<FtpReply> ExecuteAsync(this IFtpClient client, string command,
             TaskFactory<FtpReply> factory = null,
             TaskCreationOptions creationOptions = default(TaskCreationOptions),
             TaskScheduler scheduler = null)
@@ -263,7 +263,7 @@ namespace System.Net.FtpClient.Async
         /// <param name="creationOptions">The creation options.</param>
         /// <param name="scheduler">The scheduler.</param>
         /// <returns></returns>
-        public static Task<bool> FileExistsAsync(this FtpClient client, string path,
+        public static Task<bool> FileExistsAsync(this IFtpClient client, string path,
             TaskFactory<bool> factory = null,
             TaskCreationOptions creationOptions = default(TaskCreationOptions),
             TaskScheduler scheduler = null)
@@ -284,7 +284,7 @@ namespace System.Net.FtpClient.Async
         /// <param name="creationOptions">The creation options.</param>
         /// <param name="scheduler">The scheduler.</param>
         /// <returns></returns>
-        public static Task<bool> FileExistsAsync(this FtpClient client, string path, FtpListOption options,
+        public static Task<bool> FileExistsAsync(this IFtpClient client, string path, FtpListOption options,
             TaskFactory<bool> factory = null,
             TaskCreationOptions creationOptions = default(TaskCreationOptions),
             TaskScheduler scheduler = null)
@@ -304,7 +304,7 @@ namespace System.Net.FtpClient.Async
         /// <param name="creationOptions">The creation options.</param>
         /// <param name="scheduler">The scheduler.</param>
         /// <returns></returns>
-        public static Task<long> GetFileSizeAsync(this FtpClient client, string path,
+        public static Task<long> GetFileSizeAsync(this IFtpClient client, string path,
             TaskFactory<long> factory = null,
             TaskCreationOptions creationOptions = default(TaskCreationOptions),
             TaskScheduler scheduler = null)
@@ -324,7 +324,7 @@ namespace System.Net.FtpClient.Async
         /// <param name="creationOptions">The creation options.</param>
         /// <param name="scheduler">The scheduler.</param>
         /// <returns></returns>
-        public static Task GetHashAsync(this FtpClient client, string path,
+        public static Task GetHashAsync(this IFtpClient client, string path,
             TaskFactory factory = null,
             TaskCreationOptions creationOptions = default(TaskCreationOptions),
             TaskScheduler scheduler = null)
@@ -343,7 +343,7 @@ namespace System.Net.FtpClient.Async
         /// <param name="creationOptions">The creation options.</param>
         /// <param name="scheduler">The scheduler.</param>
         /// <returns></returns>
-        public static Task<FtpHashAlgorithm> GetHashAlgorithmAsync(this FtpClient client,
+        public static Task<FtpHashAlgorithm> GetHashAlgorithmAsync(this IFtpClient client,
             TaskFactory<FtpHashAlgorithm> factory = null,
             TaskCreationOptions creationOptions = default(TaskCreationOptions),
             TaskScheduler scheduler = null)
@@ -362,7 +362,7 @@ namespace System.Net.FtpClient.Async
         /// <param name="creationOptions">The creation options.</param>
         /// <param name="scheduler">The scheduler.</param>
         /// <returns></returns>
-        public static Task<FtpListItem[]> GetListingAsync(this FtpClient client,
+        public static Task<FtpListItem[]> GetListingAsync(this IFtpClient client,
             TaskFactory<FtpListItem[]> factory = null,
             TaskCreationOptions creationOptions = default(TaskCreationOptions),
             TaskScheduler scheduler = null)
@@ -382,7 +382,7 @@ namespace System.Net.FtpClient.Async
         /// <param name="creationOptions">The creation options.</param>
         /// <param name="scheduler">The scheduler.</param>
         /// <returns></returns>
-        public static Task<FtpListItem[]> GetListingAsync(this FtpClient client, string path,
+        public static Task<FtpListItem[]> GetListingAsync(this IFtpClient client, string path,
             TaskFactory<FtpListItem[]> factory = null,
             TaskCreationOptions creationOptions = default(TaskCreationOptions),
             TaskScheduler scheduler = null)
@@ -403,7 +403,7 @@ namespace System.Net.FtpClient.Async
         /// <param name="creationOptions">The creation options.</param>
         /// <param name="scheduler">The scheduler.</param>
         /// <returns></returns>
-        public static Task<FtpListItem[]> GetListingAsync(this FtpClient client, string path, FtpListOption options,
+        public static Task<FtpListItem[]> GetListingAsync(this IFtpClient client, string path, FtpListOption options,
             TaskFactory<FtpListItem[]> factory = null,
             TaskCreationOptions creationOptions = default(TaskCreationOptions),
             TaskScheduler scheduler = null)
@@ -423,7 +423,7 @@ namespace System.Net.FtpClient.Async
         /// <param name="creationOptions">The creation options.</param>
         /// <param name="scheduler">The scheduler.</param>
         /// <returns></returns>
-        public static Task<DateTime> GetModifiedTimeAsync(this FtpClient client, string path,
+        public static Task<DateTime> GetModifiedTimeAsync(this IFtpClient client, string path,
             TaskFactory<DateTime> factory = null,
             TaskCreationOptions creationOptions = default(TaskCreationOptions),
             TaskScheduler scheduler = null)
@@ -442,7 +442,7 @@ namespace System.Net.FtpClient.Async
         /// <param name="creationOptions">The creation options.</param>
         /// <param name="scheduler">The scheduler.</param>
         /// <returns></returns>
-        public static Task<string[]> GetNameListingAsync(this FtpClient client,
+        public static Task<string[]> GetNameListingAsync(this IFtpClient client,
             TaskFactory<string[]> factory = null,
             TaskCreationOptions creationOptions = default(TaskCreationOptions),
             TaskScheduler scheduler = null)
@@ -462,7 +462,7 @@ namespace System.Net.FtpClient.Async
         /// <param name="creationOptions">The creation options.</param>
         /// <param name="scheduler">The scheduler.</param>
         /// <returns></returns>
-        public static Task<string[]> GetNameListingAsync(this FtpClient client, string path,
+        public static Task<string[]> GetNameListingAsync(this IFtpClient client, string path,
             TaskFactory<string[]> factory = null,
             TaskCreationOptions creationOptions = default(TaskCreationOptions),
             TaskScheduler scheduler = null)
@@ -482,7 +482,7 @@ namespace System.Net.FtpClient.Async
         /// <param name="creationOptions">The creation options.</param>
         /// <param name="scheduler">The scheduler.</param>
         /// <returns></returns>
-        public static Task<FtpListItem> GetObjectInfoAsync(this FtpClient client, string path,
+        public static Task<FtpListItem> GetObjectInfoAsync(this IFtpClient client, string path,
             TaskFactory<FtpListItem> factory = null,
             TaskCreationOptions creationOptions = default(TaskCreationOptions),
             TaskScheduler scheduler = null)
@@ -501,7 +501,7 @@ namespace System.Net.FtpClient.Async
         /// <param name="creationOptions">The creation options.</param>
         /// <param name="scheduler">The scheduler.</param>
         /// <returns></returns>
-        public static Task<string> GetWorkingDirectoryAsync(this FtpClient client,
+        public static Task<string> GetWorkingDirectoryAsync(this IFtpClient client,
             TaskFactory<string> factory = null,
             TaskCreationOptions creationOptions = default(TaskCreationOptions),
             TaskScheduler scheduler = null)
@@ -521,7 +521,7 @@ namespace System.Net.FtpClient.Async
         /// <param name="creationOptions">The creation options.</param>
         /// <param name="scheduler">The scheduler.</param>
         /// <returns></returns>
-        public static Task<Stream> OpenAppendAsync(this FtpClient client, string path,
+        public static Task<Stream> OpenAppendAsync(this IFtpClient client, string path,
             TaskFactory<Stream> factory = null,
             TaskCreationOptions creationOptions = default(TaskCreationOptions),
             TaskScheduler scheduler = null)
@@ -542,7 +542,7 @@ namespace System.Net.FtpClient.Async
         /// <param name="creationOptions">The creation options.</param>
         /// <param name="scheduler">The scheduler.</param>
         /// <returns></returns>
-        public static Task<Stream> OpenAppendAsync(this FtpClient client, string path, FtpDataType type,
+        public static Task<Stream> OpenAppendAsync(this IFtpClient client, string path, FtpDataType type,
             TaskFactory<Stream> factory = null,
             TaskCreationOptions creationOptions = default(TaskCreationOptions),
             TaskScheduler scheduler = null)
@@ -562,7 +562,7 @@ namespace System.Net.FtpClient.Async
         /// <param name="creationOptions">The creation options.</param>
         /// <param name="scheduler">The scheduler.</param>
         /// <returns></returns>
-        public static Task<Stream> OpenReadAsync(this FtpClient client, string path,
+        public static Task<Stream> OpenReadAsync(this IFtpClient client, string path,
             TaskFactory<Stream> factory = null,
             TaskCreationOptions creationOptions = default(TaskCreationOptions),
             TaskScheduler scheduler = null)
@@ -583,7 +583,7 @@ namespace System.Net.FtpClient.Async
         /// <param name="creationOptions">The creation options.</param>
         /// <param name="scheduler">The scheduler.</param>
         /// <returns></returns>
-        public static Task<Stream> OpenReadAsync(this FtpClient client, string path, long restart,
+        public static Task<Stream> OpenReadAsync(this IFtpClient client, string path, long restart,
             TaskFactory<Stream> factory = null,
             TaskCreationOptions creationOptions = default(TaskCreationOptions),
             TaskScheduler scheduler = null)
@@ -604,7 +604,7 @@ namespace System.Net.FtpClient.Async
         /// <param name="creationOptions">The creation options.</param>
         /// <param name="scheduler">The scheduler.</param>
         /// <returns></returns>
-        public static Task<Stream> OpenReadAsync(this FtpClient client, string path, FtpDataType type,
+        public static Task<Stream> OpenReadAsync(this IFtpClient client, string path, FtpDataType type,
             TaskFactory<Stream> factory = null,
             TaskCreationOptions creationOptions = default(TaskCreationOptions),
             TaskScheduler scheduler = null)
@@ -626,7 +626,7 @@ namespace System.Net.FtpClient.Async
         /// <param name="creationOptions">The creation options.</param>
         /// <param name="scheduler">The scheduler.</param>
         /// <returns></returns>
-        public static Task<Stream> OpenReadAsync(this FtpClient client, string path, FtpDataType type, long restart,
+        public static Task<Stream> OpenReadAsync(this IFtpClient client, string path, FtpDataType type, long restart,
             TaskFactory<Stream> factory = null,
             TaskCreationOptions creationOptions = default(TaskCreationOptions),
             TaskScheduler scheduler = null)
@@ -646,7 +646,7 @@ namespace System.Net.FtpClient.Async
         /// <param name="creationOptions">The creation options.</param>
         /// <param name="scheduler">The scheduler.</param>
         /// <returns></returns>
-        public static Task<Stream> OpenWriteAsync(this FtpClient client, string path,
+        public static Task<Stream> OpenWriteAsync(this IFtpClient client, string path,
             TaskFactory<Stream> factory = null,
             TaskCreationOptions creationOptions = default(TaskCreationOptions),
             TaskScheduler scheduler = null)
@@ -667,7 +667,7 @@ namespace System.Net.FtpClient.Async
         /// <param name="creationOptions">The creation options.</param>
         /// <param name="scheduler">The scheduler.</param>
         /// <returns></returns>
-        public static Task<Stream> OpenWriteAsync(this FtpClient client, string path, FtpDataType type,
+        public static Task<Stream> OpenWriteAsync(this IFtpClient client, string path, FtpDataType type,
             TaskFactory<Stream> factory = null,
             TaskCreationOptions creationOptions = default(TaskCreationOptions),
             TaskScheduler scheduler = null)
@@ -688,7 +688,7 @@ namespace System.Net.FtpClient.Async
         /// <param name="creationOptions">The creation options.</param>
         /// <param name="scheduler">The scheduler.</param>
         /// <returns></returns>
-        public static Task RenameAsync(this FtpClient client, string path, string dest,
+        public static Task RenameAsync(this IFtpClient client, string path, string dest,
             TaskFactory factory = null,
             TaskCreationOptions creationOptions = default(TaskCreationOptions),
             TaskScheduler scheduler = null)
@@ -708,7 +708,7 @@ namespace System.Net.FtpClient.Async
         /// <param name="creationOptions">The creation options.</param>
         /// <param name="scheduler">The scheduler.</param>
         /// <returns></returns>
-        public static Task SetHashAlgorithmAsync(this FtpClient client, FtpHashAlgorithm type,
+        public static Task SetHashAlgorithmAsync(this IFtpClient client, FtpHashAlgorithm type,
             TaskFactory factory = null,
             TaskCreationOptions creationOptions = default(TaskCreationOptions),
             TaskScheduler scheduler = null)
@@ -728,7 +728,7 @@ namespace System.Net.FtpClient.Async
         /// <param name="creationOptions">The creation options.</param>
         /// <param name="scheduler">The scheduler.</param>
         /// <returns></returns>
-        public static Task SetWorkingDirectoryAsync(this FtpClient client, string path,
+        public static Task SetWorkingDirectoryAsync(this IFtpClient client, string path,
             TaskFactory factory = null,
             TaskCreationOptions creationOptions = default(TaskCreationOptions),
             TaskScheduler scheduler = null)
