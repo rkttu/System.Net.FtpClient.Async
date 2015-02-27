@@ -55,7 +55,7 @@
     <Compile Include="Extensions\XSHA1Async.cs" />
     <Compile Include="Extensions\XSHA256Async.cs" />
     <Compile Include="Extensions\XSHA512Async.cs" />
-    <Compile Include="FtpClientAsync.cs" />
+    <Compile Include="FtpClientAsyncExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
